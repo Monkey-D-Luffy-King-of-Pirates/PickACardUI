@@ -27,11 +27,17 @@ namespace PickACardUI
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string[] pickedCards = CardPicker.PickSomeCards((int)numberOfCards.Value);
-            listOfCards.Items.Clear();
+
+
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            string[] pickedCards = PickACardUI.CardPicker.PickSomeCards((int)numberOfCards.Value);  /*CardPicker.PickSomeCards((int)numberOfCards.Value); */
+            listOfCards1.Items.Clear();
             foreach (string card in pickedCards)
             {
-                listOfCards.Items.Add(card);
+                listOfCards1.Items.Add(card);
             }
         }
     }
